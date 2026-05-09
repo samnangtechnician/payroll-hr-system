@@ -1,0 +1,404 @@
+{
+    "app": {
+        "name": "ប្រាក់​ខែ និង​ធនធាន​មនុស្ស",
+        "tagline": "ប្រព័ន្ធ​គ្រប់​គ្រង​ប្រាក់​ខែ និង​ធនធាន​មនុស្ស"
+    },
+    "common": {
+        "create": "បន្ថែម",
+        "save": "រក្សា​ទុក",
+        "update": "ធ្វើ​បច្ចុប្បន្នភាព",
+        "edit": "កែប្រែ",
+        "delete": "លុប",
+        "cancel": "បោះបង់",
+        "back": "ត្រឡប់​ក្រោយ",
+        "search": "ស្វែងរក",
+        "actions": "សកម្មភាព",
+        "filters": "តម្រង",
+        "status": "ស្ថានភាព",
+        "active": "សកម្ម",
+        "inactive": "មិន​សកម្ម",
+        "yes": "បាទ/ចាស",
+        "no": "ទេ",
+        "all": "ទាំងអស់",
+        "select": "ជ្រើស​រើស...",
+        "no_results": "មិន​មាន​កំណត់ត្រា",
+        "loading": "កំពុង​ផ្ទុក...",
+        "view": "មើល",
+        "submit": "ដាក់​ស្នើ",
+        "reset": "កំណត់​ឡើង​វិញ",
+        "today": "ថ្ងៃ​នេះ",
+        "language": "ភាសា",
+        "english": "អង់គ្លេស",
+        "khmer": "ខ្មែរ",
+        "logout": "ចេញ",
+        "profile": "ប្រវត្តិរូប",
+        "settings": "ការ​កំណត់",
+        "branch": "សាខា",
+        "company": "ក្រុមហ៊ុន",
+        "department": "នាយកដ្ឋាន",
+        "position": "មុខ​តំណែង",
+        "employee": "បុគ្គលិក",
+        "code": "លេខ​កូដ",
+        "name": "ឈ្មោះ",
+        "email": "អ៊ីមែល",
+        "phone": "ទូរស័ព្ទ",
+        "address": "អាសយដ្ឋាន",
+        "description": "ការ​ពណ៌នា",
+        "created_at": "បាន​បង្កើត",
+        "updated_at": "ធ្វើ​បច្ចុប្បន្នភាព",
+        "from_date": "ពី​ថ្ងៃ",
+        "to_date": "ដល់​ថ្ងៃ",
+        "amount": "ចំនួន",
+        "currency": "រូបិយប័ណ្ណ",
+        "country": "ប្រទេស",
+        "manager": "អ្នក​គ្រប់​គ្រង",
+        "is_head_office": "ការិយាល័យ​កណ្ដាល",
+        "show_inactive": "បង្ហាញ​ដែល​មិន​សកម្ម"
+    },
+    "auth": {
+        "login": "ចូល",
+        "login_to_account": "ចូល​គណនី​របស់​អ្នក",
+        "email": "អាស័យដ្ឋាន​អ៊ីមែល",
+        "password": "ពាក្យ​សម្ងាត់",
+        "remember_me": "ចង​ចាំ​ខ្ញុំ",
+        "sign_in": "ចូល",
+        "logout": "ចេញ",
+        "invalid_credentials": "អ៊ីមែល ឬ​ពាក្យ​សម្ងាត់​មិន​ត្រឹម​ត្រូវ",
+        "logged_out": "អ្នក​បាន​ចេញ​ពី​គណនី"
+    },
+    "menu": {
+        "dashboard": "ផ្ទាំង​គ្រប់​គ្រង",
+        "organization": "ស្ថាប័ន",
+        "companies": "ក្រុមហ៊ុន",
+        "branches": "សាខា",
+        "departments": "នាយកដ្ឋាន",
+        "positions": "មុខ​តំណែង",
+        "people": "បុគ្គលិក",
+        "employees": "បុគ្គលិក",
+        "users": "អ្នក​ប្រើ​ប្រាស់",
+        "roles": "តួនាទី",
+        "attendance": "វត្តមាន",
+        "shifts": "វេន​ការងារ",
+        "public_holidays": "ថ្ងៃ​បុណ្យ​ជាតិ",
+        "attendance_records": "កំណត់​ត្រា​វត្តមាន",
+        "leave": "ការ​ឈប់​សម្រាក",
+        "leave_types": "ប្រភេទ​ការ​ឈប់",
+        "leave_requests": "សំណើ​ឈប់​សម្រាក",
+        "overtime": "ម៉ោង​បន្ថែម",
+        "payroll": "ប្រាក់​ខែ",
+        "salary_components": "ធាតុ​ប្រាក់​ខែ",
+        "payroll_periods": "រយៈពេល​ប្រាក់​ខែ",
+        "payroll_runs": "ការ​ដំណើរ​ការ​ប្រាក់​ខែ",
+        "payslips": "ប័ណ្ណ​ប្រាក់​ខែ",
+        "settings": "ការ​កំណត់",
+        "countries": "ប្រទេស",
+        "currencies": "រូបិយប័ណ្ណ",
+        "system_settings": "ការ​កំណត់​ប្រព័ន្ធ"
+    },
+    "dashboard": {
+        "title": "ផ្ទាំង​គ្រប់​គ្រង",
+        "welcome": "សូម​ស្វាគមន៍​ការ​ត្រឡប់​មក​វិញ",
+        "stats": {
+            "branches": "សាខា",
+            "departments": "នាយកដ្ឋាន",
+            "employees": "បុគ្គលិក",
+            "active_employees": "បុគ្គលិក​សកម្ម",
+            "pending_leaves": "ការ​ឈប់​មិន​ទាន់​សម្រេច",
+            "this_month_payroll": "ប្រាក់​ខែ​ខែ​នេះ"
+        },
+        "recent_employees": "បុគ្គលិក​ថ្មី",
+        "branch_distribution": "បុគ្គលិក​តាម​សាខា"
+    },
+    "branches": {
+        "title": "សាខា",
+        "create": "បន្ថែម​សាខា",
+        "edit": "កែប្រែ​សាខា",
+        "fields": {
+            "company": "ក្រុមហ៊ុន",
+            "country": "ប្រទេស",
+            "branch_code": "លេខ​កូដ​សាខា",
+            "name": "ឈ្មោះ​សាខា",
+            "address": "អាសយដ្ឋាន",
+            "phone": "ទូរស័ព្ទ",
+            "email": "អ៊ីមែល",
+            "is_head_office": "ការិយាល័យ​កណ្ដាល?",
+            "is_active": "សកម្ម?"
+        },
+        "deleted": "សាខា​ត្រូវ​បាន​លុប",
+        "saved": "សាខា​ត្រូវ​បាន​រក្សា​ទុក",
+        "head_office_badge": "កណ្ដាល"
+    },
+    "departments": {
+        "title": "នាយកដ្ឋាន",
+        "create": "បន្ថែម​នាយកដ្ឋាន",
+        "edit": "កែប្រែ​នាយកដ្ឋាន",
+        "fields": {
+            "company": "ក្រុមហ៊ុន",
+            "branch": "សាខា",
+            "manager": "ប្រធាន",
+            "department_code": "លេខ​កូដ",
+            "name": "ឈ្មោះ",
+            "description": "ការ​ពណ៌នា",
+            "is_active": "សកម្ម?"
+        },
+        "deleted": "នាយកដ្ឋាន​ត្រូវ​បាន​លុប",
+        "saved": "នាយកដ្ឋាន​ត្រូវ​បាន​រក្សា​ទុក"
+    },
+    "positions": {
+        "title": "មុខ​តំណែង",
+        "create": "បន្ថែម​មុខ​តំណែង",
+        "edit": "កែប្រែ​មុខ​តំណែង",
+        "fields": {
+            "company": "ក្រុមហ៊ុន",
+            "department": "នាយកដ្ឋាន",
+            "position_code": "លេខ​កូដ",
+            "title": "ចំណង​ជើង",
+            "level": "កម្រិត",
+            "description": "ការ​ពណ៌នា",
+            "is_managerial": "ជា​អ្នក​គ្រប់​គ្រង?",
+            "is_active": "សកម្ម?"
+        },
+        "deleted": "មុខ​តំណែង​ត្រូវ​បាន​លុប",
+        "saved": "មុខ​តំណែង​ត្រូវ​បាន​រក្សា​ទុក"
+    },
+    "employees": {
+        "title": "បុគ្គលិក",
+        "create": "បន្ថែម​បុគ្គលិក",
+        "edit": "កែប្រែ​បុគ្គលិក",
+        "show": "ព័ត៌មាន​បុគ្គលិក",
+        "fields": {
+            "company": "ក្រុមហ៊ុន",
+            "branch": "សាខា",
+            "department": "នាយកដ្ឋាន",
+            "position": "មុខ​តំណែង",
+            "employment_type": "ប្រភេទ​ការងារ",
+            "contract_type": "ប្រភេទ​កិច្ច​សន្យា",
+            "manager": "ប្រធាន​រាយ​ការណ៍",
+            "employee_code": "លេខ​កូដ​បុគ្គលិក",
+            "first_name": "នាម",
+            "last_name": "នាម​ត្រកូល",
+            "khmer_name": "ឈ្មោះ​ខ្មែរ",
+            "gender": "ភេទ",
+            "date_of_birth": "ថ្ងៃ​ខែ​ឆ្នាំ​កំណើត",
+            "phone": "ទូរស័ព្ទ",
+            "secondary_phone": "ទូរស័ព្ទ​បន្ទាប់​បន្សំ",
+            "email": "អ៊ីមែល",
+            "current_address": "អាសយដ្ឋាន​បច្ចុប្បន្ន",
+            "permanent_address": "អាសយដ្ឋាន​អចិន្ត្រៃយ៍",
+            "national_id_no": "លេខ​អត្តសញ្ញាណ​ប័ណ្ណ",
+            "passport_no": "លេខ​លិខិត​ឆ្លង​ដែន",
+            "passport_expiry_date": "ផុត​កំណត់​លិខិត​ឆ្លង​ដែន",
+            "join_date": "ថ្ងៃ​ចូល​ធ្វើ​ការ",
+            "probation_end_date": "ផុត​ការ​សាក​ល្បង",
+            "contract_start_date": "ថ្ងៃ​ចាប់​ផ្តើម​កិច្ច​សន្យា",
+            "contract_end_date": "ផុត​កិច្ច​សន្យា",
+            "basic_salary": "ប្រាក់​ខែ​មូលដ្ឋាន",
+            "salary_currency": "រូបិយប័ណ្ណ​ប្រាក់​ខែ",
+            "salary_payment_method": "មធ្យោបាយ​ទូទាត់",
+            "status": "ស្ថានភាព",
+            "profile_photo": "រូប​ភាព"
+        },
+        "statuses": {
+            "active": "សកម្ម",
+            "probation": "កំពុង​សាក​ល្បង",
+            "resigned": "បាន​លាឈប់",
+            "terminated": "ត្រូវ​បាន​បញ្ចប់",
+            "inactive": "មិន​សកម្ម"
+        },
+        "deleted": "បុគ្គលិក​ត្រូវ​បាន​លុប",
+        "saved": "បុគ្គលិក​ត្រូវ​បាន​រក្សា​ទុក"
+    },
+    "users": {
+        "title": "អ្នក​ប្រើ​ប្រាស់",
+        "create": "បន្ថែម​អ្នក​ប្រើ",
+        "edit": "កែប្រែ​អ្នក​ប្រើ",
+        "fields": {
+            "name": "ឈ្មោះ​ពេញ",
+            "email": "អាសយដ្ឋាន​អ៊ីមែល",
+            "username": "ឈ្មោះ​អ្នក​ប្រើ",
+            "phone": "ទូរស័ព្ទ",
+            "company": "ក្រុមហ៊ុន",
+            "employee": "បុគ្គលិក​ភ្ជាប់",
+            "password": "ពាក្យ​សម្ងាត់",
+            "password_confirmation": "បញ្ជាក់​ពាក្យ​សម្ងាត់",
+            "is_active": "សកម្ម?",
+            "roles": "តួនាទី"
+        },
+        "deleted": "អ្នក​ប្រើ​ត្រូវ​បាន​លុប",
+        "saved": "អ្នក​ប្រើ​ត្រូវ​បាន​រក្សា​ទុក"
+    },
+    "roles": {
+        "title": "តួនាទី",
+        "create": "បន្ថែម​តួនាទី",
+        "edit": "កែប្រែ​តួនាទី",
+        "fields": {
+            "company": "ក្រុមហ៊ុន",
+            "name": "ឈ្មោះ",
+            "guard_name": "Guard",
+            "description": "ការ​ពណ៌នា",
+            "is_system": "ប្រព័ន្ធ?",
+            "is_active": "សកម្ម?"
+        },
+        "deleted": "តួនាទី​ត្រូវ​បាន​លុប",
+        "saved": "តួនាទី​ត្រូវ​បាន​រក្សា​ទុក"
+    },
+    "leave_types": {
+        "title": "ប្រភេទ​ការ​ឈប់",
+        "create": "បន្ថែម​ប្រភេទ",
+        "edit": "កែប្រែ​ប្រភេទ",
+        "fields": {
+            "company": "ក្រុមហ៊ុន",
+            "name": "ឈ្មោះ",
+            "code": "លេខ​កូដ",
+            "is_paid": "បង់​ប្រាក់?",
+            "default_days_per_year": "ថ្ងៃ​ក្នុង​មួយ​ឆ្នាំ",
+            "is_active": "សកម្ម?",
+            "description": "ការ​ពណ៌នា"
+        },
+        "deleted": "ប្រភេទ​ការ​ឈប់​ត្រូវ​បាន​លុប",
+        "saved": "ប្រភេទ​ការ​ឈប់​ត្រូវ​បាន​រក្សា​ទុក"
+    },
+    "leave_requests": {
+        "title": "សំណើ​ឈប់​សម្រាក",
+        "create": "បន្ថែម​សំណើ",
+        "edit": "កែប្រែ​សំណើ",
+        "fields": {
+            "employee": "បុគ្គលិក",
+            "leave_type": "ប្រភេទ",
+            "start_date": "ថ្ងៃ​ចាប់​ផ្តើម",
+            "end_date": "ថ្ងៃ​បញ្ចប់",
+            "days_count": "ថ្ងៃ",
+            "reason": "មូលហេតុ",
+            "status": "ស្ថានភាព"
+        },
+        "statuses": {
+            "draft": "សេចក្តី​ព្រាង",
+            "submitted": "បាន​ដាក់​ស្នើ",
+            "approved": "បាន​អនុម័ត",
+            "rejected": "បាន​បដិសេធ",
+            "cancelled": "បាន​បោះបង់"
+        },
+        "deleted": "សំណើ​ត្រូវ​បាន​លុប",
+        "saved": "សំណើ​ត្រូវ​បាន​រក្សា​ទុក"
+    },
+    "shifts": {
+        "title": "វេន​ការងារ",
+        "create": "បន្ថែម​វេន",
+        "edit": "កែប្រែ​វេន",
+        "fields": {
+            "company": "ក្រុមហ៊ុន",
+            "name": "ឈ្មោះ",
+            "start_time": "ម៉ោង​ចាប់​ផ្តើម",
+            "end_time": "ម៉ោង​បញ្ចប់",
+            "break_minutes": "សម្រាក (នាទី)",
+            "is_active": "សកម្ម?",
+            "is_overnight": "វេន​យប់?"
+        },
+        "deleted": "វេន​ត្រូវ​បាន​លុប",
+        "saved": "វេន​ត្រូវ​បាន​រក្សា​ទុក"
+    },
+    "public_holidays": {
+        "title": "ថ្ងៃ​បុណ្យ​ជាតិ",
+        "create": "បន្ថែម​ថ្ងៃ​បុណ្យ",
+        "edit": "កែប្រែ​ថ្ងៃ​បុណ្យ",
+        "fields": {
+            "company": "ក្រុមហ៊ុន",
+            "country": "ប្រទេស",
+            "name": "ឈ្មោះ",
+            "holiday_date": "កាល​បរិច្ឆេទ",
+            "is_paid": "បង់​ប្រាក់?",
+            "description": "ការ​ពណ៌នា"
+        },
+        "deleted": "ថ្ងៃ​បុណ្យ​ត្រូវ​បាន​លុប",
+        "saved": "ថ្ងៃ​បុណ្យ​ត្រូវ​បាន​រក្សា​ទុក"
+    },
+    "attendance": {
+        "title": "កំណត់​ត្រា​វត្តមាន",
+        "fields": {
+            "employee": "បុគ្គលិក",
+            "work_date": "ថ្ងៃ​ធ្វើ​ការ",
+            "shift": "វេន",
+            "check_in": "ចូល​ធ្វើ​ការ",
+            "check_out": "ចេញ​ធ្វើ​ការ",
+            "status": "ស្ថានភាព",
+            "late_minutes": "យឺត (នាទី)",
+            "early_leave_minutes": "ចេញ​មុន (នាទី)",
+            "ot_minutes": "OT (នាទី)",
+            "remarks": "កំណត់​សម្គាល់"
+        }
+    },
+    "salary_components": {
+        "title": "ធាតុ​ប្រាក់​ខែ",
+        "create": "បន្ថែម​ធាតុ",
+        "edit": "កែប្រែ​ធាតុ",
+        "fields": {
+            "company": "ក្រុមហ៊ុន",
+            "name": "ឈ្មោះ",
+            "code": "លេខ​កូដ",
+            "type": "ប្រភេទ",
+            "calculation_type": "របៀប​គណនា",
+            "default_value": "តម្លៃ​លំនាំ​ដើម",
+            "is_taxable": "ជាប់​ពន្ធ?",
+            "is_active": "សកម្ម?"
+        }
+    },
+    "payroll_periods": {
+        "title": "រយៈពេល​ប្រាក់​ខែ",
+        "create": "បន្ថែម​រយៈពេល",
+        "edit": "កែប្រែ​រយៈពេល",
+        "fields": {
+            "company": "ក្រុមហ៊ុន",
+            "name": "ឈ្មោះ",
+            "start_date": "ថ្ងៃ​ចាប់​ផ្តើម",
+            "end_date": "ថ្ងៃ​បញ្ចប់",
+            "pay_date": "ថ្ងៃ​បើក​ប្រាក់",
+            "status": "ស្ថានភាព"
+        }
+    },
+    "payroll_runs": {
+        "title": "ការ​ដំណើរ​ការ​ប្រាក់​ខែ",
+        "create": "បន្ថែម​ការ​ដំណើរ​ការ",
+        "edit": "កែប្រែ​ការ​ដំណើរ​ការ",
+        "fields": {
+            "period": "រយៈពេល",
+            "branch": "សាខា",
+            "country": "ប្រទេស",
+            "currency": "រូបិយប័ណ្ណ",
+            "status": "ស្ថានភាព",
+            "exchange_rate": "អត្រា​ប្តូរ​ប្រាក់",
+            "remarks": "កំណត់​សម្គាល់"
+        }
+    },
+    "payslips": {
+        "title": "ប័ណ្ណ​ប្រាក់​ខែ",
+        "fields": {
+            "employee": "បុគ្គលិក",
+            "period": "រយៈពេល",
+            "net_pay": "ប្រាក់​សុទ្ធ",
+            "issued_at": "បាន​ចេញ",
+            "is_published": "បាន​ផ្សព្វផ្សាយ?"
+        }
+    },
+    "countries": {
+        "title": "ប្រទេស",
+        "fields": {
+            "name": "ឈ្មោះ",
+            "iso2": "ISO2",
+            "iso3": "ISO3",
+            "phone_code": "កូដ​ទូរស័ព្ទ",
+            "default_currency_code": "រូបិយប័ណ្ណ",
+            "is_supported_payroll_country": "គាំទ្រ​ប្រាក់​ខែ?",
+            "is_active": "សកម្ម"
+        }
+    },
+    "currencies": {
+        "title": "រូបិយប័ណ្ណ",
+        "fields": {
+            "code": "លេខ​កូដ",
+            "name": "ឈ្មោះ",
+            "symbol": "សញ្ញា",
+            "decimal_places": "ចំនួន​ទសភាគ",
+            "is_active": "សកម្ម"
+        }
+    }
+}

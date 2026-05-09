@@ -1,0 +1,404 @@
+{
+    "app": {
+        "name": "Payroll & HR",
+        "tagline": "Payroll & HR Management System"
+    },
+    "common": {
+        "create": "Create",
+        "save": "Save",
+        "update": "Update",
+        "edit": "Edit",
+        "delete": "Delete",
+        "cancel": "Cancel",
+        "back": "Back",
+        "search": "Search",
+        "actions": "Actions",
+        "filters": "Filters",
+        "status": "Status",
+        "active": "Active",
+        "inactive": "Inactive",
+        "yes": "Yes",
+        "no": "No",
+        "all": "All",
+        "select": "Select...",
+        "no_results": "No records found",
+        "loading": "Loading...",
+        "view": "View",
+        "submit": "Submit",
+        "reset": "Reset",
+        "today": "Today",
+        "language": "Language",
+        "english": "English",
+        "khmer": "Khmer",
+        "logout": "Logout",
+        "profile": "Profile",
+        "settings": "Settings",
+        "branch": "Branch",
+        "company": "Company",
+        "department": "Department",
+        "position": "Position",
+        "employee": "Employee",
+        "code": "Code",
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "address": "Address",
+        "description": "Description",
+        "created_at": "Created At",
+        "updated_at": "Updated At",
+        "from_date": "From Date",
+        "to_date": "To Date",
+        "amount": "Amount",
+        "currency": "Currency",
+        "country": "Country",
+        "manager": "Manager",
+        "is_head_office": "Head Office",
+        "show_inactive": "Show inactive"
+    },
+    "auth": {
+        "login": "Login",
+        "login_to_account": "Login to your account",
+        "email": "Email Address",
+        "password": "Password",
+        "remember_me": "Remember me",
+        "sign_in": "Sign In",
+        "logout": "Logout",
+        "invalid_credentials": "Invalid email or password",
+        "logged_out": "You have been logged out"
+    },
+    "menu": {
+        "dashboard": "Dashboard",
+        "organization": "Organization",
+        "companies": "Companies",
+        "branches": "Branches",
+        "departments": "Departments",
+        "positions": "Positions",
+        "people": "People",
+        "employees": "Employees",
+        "users": "Users",
+        "roles": "Roles",
+        "attendance": "Attendance",
+        "shifts": "Shifts",
+        "public_holidays": "Public Holidays",
+        "attendance_records": "Attendance Records",
+        "leave": "Leave",
+        "leave_types": "Leave Types",
+        "leave_requests": "Leave Requests",
+        "overtime": "Overtime",
+        "payroll": "Payroll",
+        "salary_components": "Salary Components",
+        "payroll_periods": "Payroll Periods",
+        "payroll_runs": "Payroll Runs",
+        "payslips": "Payslips",
+        "settings": "Settings",
+        "countries": "Countries",
+        "currencies": "Currencies",
+        "system_settings": "System Settings"
+    },
+    "dashboard": {
+        "title": "Dashboard",
+        "welcome": "Welcome back",
+        "stats": {
+            "branches": "Branches",
+            "departments": "Departments",
+            "employees": "Employees",
+            "active_employees": "Active Employees",
+            "pending_leaves": "Pending Leaves",
+            "this_month_payroll": "This Month Payroll"
+        },
+        "recent_employees": "Recent Employees",
+        "branch_distribution": "Employees by Branch"
+    },
+    "branches": {
+        "title": "Branches",
+        "create": "New Branch",
+        "edit": "Edit Branch",
+        "fields": {
+            "company": "Company",
+            "country": "Country",
+            "branch_code": "Branch Code",
+            "name": "Branch Name",
+            "address": "Address",
+            "phone": "Phone",
+            "email": "Email",
+            "is_head_office": "Is Head Office?",
+            "is_active": "Is Active?"
+        },
+        "deleted": "Branch deleted",
+        "saved": "Branch saved",
+        "head_office_badge": "HQ"
+    },
+    "departments": {
+        "title": "Departments",
+        "create": "New Department",
+        "edit": "Edit Department",
+        "fields": {
+            "company": "Company",
+            "branch": "Branch",
+            "manager": "Manager",
+            "department_code": "Code",
+            "name": "Name",
+            "description": "Description",
+            "is_active": "Is Active?"
+        },
+        "deleted": "Department deleted",
+        "saved": "Department saved"
+    },
+    "positions": {
+        "title": "Positions",
+        "create": "New Position",
+        "edit": "Edit Position",
+        "fields": {
+            "company": "Company",
+            "department": "Department",
+            "position_code": "Code",
+            "title": "Title",
+            "level": "Level",
+            "description": "Description",
+            "is_managerial": "Managerial?",
+            "is_active": "Is Active?"
+        },
+        "deleted": "Position deleted",
+        "saved": "Position saved"
+    },
+    "employees": {
+        "title": "Employees",
+        "create": "New Employee",
+        "edit": "Edit Employee",
+        "show": "Employee Details",
+        "fields": {
+            "company": "Company",
+            "branch": "Branch",
+            "department": "Department",
+            "position": "Position",
+            "employment_type": "Employment Type",
+            "contract_type": "Contract Type",
+            "manager": "Reporting Manager",
+            "employee_code": "Employee Code",
+            "first_name": "First Name",
+            "last_name": "Last Name",
+            "khmer_name": "Khmer Name",
+            "gender": "Gender",
+            "date_of_birth": "Date of Birth",
+            "phone": "Phone",
+            "secondary_phone": "Secondary Phone",
+            "email": "Email",
+            "current_address": "Current Address",
+            "permanent_address": "Permanent Address",
+            "national_id_no": "National ID No",
+            "passport_no": "Passport No",
+            "passport_expiry_date": "Passport Expiry",
+            "join_date": "Join Date",
+            "probation_end_date": "Probation End",
+            "contract_start_date": "Contract Start",
+            "contract_end_date": "Contract End",
+            "basic_salary": "Basic Salary",
+            "salary_currency": "Salary Currency",
+            "salary_payment_method": "Payment Method",
+            "status": "Status",
+            "profile_photo": "Profile Photo"
+        },
+        "statuses": {
+            "active": "Active",
+            "probation": "Probation",
+            "resigned": "Resigned",
+            "terminated": "Terminated",
+            "inactive": "Inactive"
+        },
+        "deleted": "Employee deleted",
+        "saved": "Employee saved"
+    },
+    "users": {
+        "title": "Users",
+        "create": "New User",
+        "edit": "Edit User",
+        "fields": {
+            "name": "Full Name",
+            "email": "Email Address",
+            "username": "Username",
+            "phone": "Phone",
+            "company": "Company",
+            "employee": "Linked Employee",
+            "password": "Password",
+            "password_confirmation": "Confirm Password",
+            "is_active": "Is Active?",
+            "roles": "Roles"
+        },
+        "deleted": "User deleted",
+        "saved": "User saved"
+    },
+    "roles": {
+        "title": "Roles",
+        "create": "New Role",
+        "edit": "Edit Role",
+        "fields": {
+            "company": "Company",
+            "name": "Name",
+            "guard_name": "Guard",
+            "description": "Description",
+            "is_system": "System?",
+            "is_active": "Is Active?"
+        },
+        "deleted": "Role deleted",
+        "saved": "Role saved"
+    },
+    "leave_types": {
+        "title": "Leave Types",
+        "create": "New Leave Type",
+        "edit": "Edit Leave Type",
+        "fields": {
+            "company": "Company",
+            "name": "Name",
+            "code": "Code",
+            "is_paid": "Paid?",
+            "default_days_per_year": "Days/Year",
+            "is_active": "Is Active?",
+            "description": "Description"
+        },
+        "deleted": "Leave type deleted",
+        "saved": "Leave type saved"
+    },
+    "leave_requests": {
+        "title": "Leave Requests",
+        "create": "New Leave Request",
+        "edit": "Edit Leave Request",
+        "fields": {
+            "employee": "Employee",
+            "leave_type": "Leave Type",
+            "start_date": "Start Date",
+            "end_date": "End Date",
+            "days_count": "Days",
+            "reason": "Reason",
+            "status": "Status"
+        },
+        "statuses": {
+            "draft": "Draft",
+            "submitted": "Submitted",
+            "approved": "Approved",
+            "rejected": "Rejected",
+            "cancelled": "Cancelled"
+        },
+        "deleted": "Leave request deleted",
+        "saved": "Leave request saved"
+    },
+    "shifts": {
+        "title": "Shifts",
+        "create": "New Shift",
+        "edit": "Edit Shift",
+        "fields": {
+            "company": "Company",
+            "name": "Name",
+            "start_time": "Start Time",
+            "end_time": "End Time",
+            "break_minutes": "Break (mins)",
+            "is_active": "Is Active?",
+            "is_overnight": "Overnight Shift?"
+        },
+        "deleted": "Shift deleted",
+        "saved": "Shift saved"
+    },
+    "public_holidays": {
+        "title": "Public Holidays",
+        "create": "New Public Holiday",
+        "edit": "Edit Public Holiday",
+        "fields": {
+            "company": "Company",
+            "country": "Country",
+            "name": "Name",
+            "holiday_date": "Date",
+            "is_paid": "Paid?",
+            "description": "Description"
+        },
+        "deleted": "Holiday deleted",
+        "saved": "Holiday saved"
+    },
+    "attendance": {
+        "title": "Attendance Records",
+        "fields": {
+            "employee": "Employee",
+            "work_date": "Work Date",
+            "shift": "Shift",
+            "check_in": "Check In",
+            "check_out": "Check Out",
+            "status": "Status",
+            "late_minutes": "Late (min)",
+            "early_leave_minutes": "Early (min)",
+            "ot_minutes": "OT (min)",
+            "remarks": "Remarks"
+        }
+    },
+    "salary_components": {
+        "title": "Salary Components",
+        "create": "New Salary Component",
+        "edit": "Edit Salary Component",
+        "fields": {
+            "company": "Company",
+            "name": "Name",
+            "code": "Code",
+            "type": "Type",
+            "calculation_type": "Calculation",
+            "default_value": "Default Value",
+            "is_taxable": "Taxable?",
+            "is_active": "Is Active?"
+        }
+    },
+    "payroll_periods": {
+        "title": "Payroll Periods",
+        "create": "New Payroll Period",
+        "edit": "Edit Payroll Period",
+        "fields": {
+            "company": "Company",
+            "name": "Name",
+            "start_date": "Start Date",
+            "end_date": "End Date",
+            "pay_date": "Pay Date",
+            "status": "Status"
+        }
+    },
+    "payroll_runs": {
+        "title": "Payroll Runs",
+        "create": "New Payroll Run",
+        "edit": "Edit Payroll Run",
+        "fields": {
+            "period": "Period",
+            "branch": "Branch",
+            "country": "Country",
+            "currency": "Currency",
+            "status": "Status",
+            "exchange_rate": "Exchange Rate",
+            "remarks": "Remarks"
+        }
+    },
+    "payslips": {
+        "title": "Payslips",
+        "fields": {
+            "employee": "Employee",
+            "period": "Period",
+            "net_pay": "Net Pay",
+            "issued_at": "Issued At",
+            "is_published": "Published?"
+        }
+    },
+    "countries": {
+        "title": "Countries",
+        "fields": {
+            "name": "Name",
+            "iso2": "ISO2",
+            "iso3": "ISO3",
+            "phone_code": "Phone Code",
+            "default_currency_code": "Currency",
+            "is_supported_payroll_country": "Supports Payroll?",
+            "is_active": "Active"
+        }
+    },
+    "currencies": {
+        "title": "Currencies",
+        "fields": {
+            "code": "Code",
+            "name": "Name",
+            "symbol": "Symbol",
+            "decimal_places": "Decimals",
+            "is_active": "Active"
+        }
+    }
+}
