@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Currency;
 use Illuminate\Http\JsonResponse;
 use Illuminate\View\View;
-use Yajra\DataTables\DataTables;
+use Yajra\DataTables\Facades\DataTables;
 
 class CurrencyController extends Controller
 {
