@@ -1,7 +1,7 @@
 import { createI18n } from 'vue-i18n';
 
-import en from '../lang/en.json';
-import km from '../lang/km.json';
+import en from '../../lang/en.json';
+import km from '../../lang/km.json';
 
 export const SUPPORTED_LOCALES = ['en', 'km'];
 

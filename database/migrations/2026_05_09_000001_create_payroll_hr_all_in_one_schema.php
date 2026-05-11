@@ -1547,7 +1547,7 @@ return new class extends Migration
 
         if (Schema::hasTable('departments') && Schema::hasTable('employees')) {
             Schema::table('departments', function (Blueprint $table) {
-                if (! $this->hasForeignKey('departments', 'departments_manager_employee_id_foreign')) {
+                if (! $this->hasForeignKey('departments', 'departments_manager_employee_id_foreign', ['manager_employee_id'])) {
                     $table->foreign('manager_employee_id')->references('id')->on('employees')->nullOnDelete();
                 }
             });
@@ -1555,7 +1555,7 @@ return new class extends Migration
 
         if (Schema::hasTable('users') && Schema::hasTable('employees')) {
             Schema::table('users', function (Blueprint $table) {
-                if (! $this->hasForeignKey('users', 'users_employee_id_foreign')) {
+                if (! $this->hasForeignKey('users', 'users_employee_id_foreign', ['employee_id'])) {
                     $table->foreign('employee_id')->references('id')->on('employees')->nullOnDelete();
                 }
             });
@@ -1582,18 +1582,19 @@ return new class extends Migration
         }
     }
 
-    private function hasForeignKey(string $table, string $foreignKeyName): bool
+    private function hasForeignKey(string $table, string $foreignKeyName, array $columns = []): bool
     {
-        $connection = Schema::getConnection();
-        $databaseName = $connection->getDatabaseName();
+        foreach (Schema::getForeignKeys($table) as $foreignKey) {
+            if (($foreignKey['name'] ?? null) === $foreignKeyName) {
+                return true;
+            }
 
-        $result = $connection->selectOne(
-            'SELECT CONSTRAINT_NAME FROM information_schema.TABLE_CONSTRAINTS
-             WHERE CONSTRAINT_SCHEMA = ? AND TABLE_NAME = ? AND CONSTRAINT_NAME = ? AND CONSTRAINT_TYPE = ?',
-            [$databaseName, $table, $foreignKeyName, 'FOREIGN KEY']
-        );
+            if ($columns !== [] && ($foreignKey['columns'] ?? []) === $columns) {
+                return true;
+            }
+        }
 
-        return $result !== null;
+        return false;
     }
 
     private function tables(): array

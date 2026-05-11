@@ -1,66 +1,91 @@
 <header class="top-header">
   <nav class="navbar navbar-expand">
-    <div class="mobile-toggle-icon d-xl-none">
+    <button type="button" class="mobile-toggle-icon d-xl-none border-0 bg-transparent p-0" aria-label="Toggle navigation">
       <i class="bi bi-list"></i>
-    </div>
+    </button>
 
-    <div class="top-navbar d-none d-xl-block">
-      <ul class="navbar-nav align-items-center">
-        <li class="nav-item">
-          <a class="nav-link" href="{{ route('admin.dashboard') }}">
-            <i class="bi bi-speedometer2 me-1"></i> {{ __('menu.dashboard') }}
-          </a>
-        </li>
-      </ul>
+    <div class="top-navbar d-none d-xl-flex header-context">
+      <div class="header-context-link" aria-current="page">
+        <span class="header-context-icon">
+          <i class="bi bi-speedometer2"></i>
+        </span>
+        <span class="header-context-meta">@yield('pageTitle', __('menu.dashboard'))</span>
+      </div>
     </div>
 
     <div class="ms-auto"></div>
 
-    <div class="top-navbar-right ms-3">
-      <ul class="navbar-nav align-items-center gap-2">
+    <div class="top-navbar-right header-actions ms-3">
+      <ul class="navbar-nav align-items-center flex-row gap-2">
 
-        {{-- Language Switcher (Vue SFC). Falls back to plain links if JS is disabled. --}}
         <li class="nav-item">
-          <language-switcher></language-switcher>
+          <details class="language-dropdown">
+            <summary class="header-language-trigger">
+              <span class="header-language-chip">
+                <span class="header-language-icon">
+                  <i class="bi bi-translate"></i>
+                </span>
+                <span class="header-language-label d-none d-md-inline">
+                  {{ app()->getLocale() === 'km' ? 'Khmer' : 'English' }}
+                </span>
+                <span class="header-language-code">{{ strtoupper(app()->getLocale()) }}</span>
+              </span>
+            </summary>
 
-          <noscript>
-            <div class="d-inline-flex gap-1">
-              <a href="?lang=en" class="btn btn-sm btn-outline-secondary">EN</a>
-              <a href="?lang=km" class="btn btn-sm btn-outline-secondary">KM</a>
+            <div class="language-menu">
+              <form method="POST" action="{{ route('locale.store') }}" class="m-0 p-0">
+                @csrf
+                <input type="hidden" name="locale" value="en">
+                <button class="dropdown-item language-menu-item{{ app()->getLocale() === 'en' ? ' active' : '' }}"
+                  type="submit">
+                  <span class="language-menu-code">EN</span>
+                  <span class="language-menu-text">English</span>
+                </button>
+              </form>
+              <form method="POST" action="{{ route('locale.store') }}" class="m-0 p-0">
+                @csrf
+                <input type="hidden" name="locale" value="km">
+                <button class="dropdown-item language-menu-item{{ app()->getLocale() === 'km' ? ' active' : '' }}"
+                  type="submit">
+                  <span class="language-menu-code">KM</span>
+                  <span class="language-menu-text">ភាសាខ្មែរ</span>
+                </button>
+              </form>
             </div>
-          </noscript>
+          </details>
         </li>
 
         {{-- User Menu --}}
-        <li class="nav-item dropdown dropdown-large">
-          <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown">
-            <div class="user-setting d-flex align-items-center gap-1">
-              <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center"
-                    style="width:36px;height:36px;font-weight:600;">
-                {{ strtoupper(mb_substr(auth()->user()?->name ?? 'U', 0, 1)) }}
+        <li class="nav-item">
+          <details class="account-dropdown">
+            <summary class="nav-link header-user-trigger">
+              <span class="user-setting">
+                <span class="header-avatar">
+                  {{ strtoupper(mb_substr(auth()->user()?->name ?? 'U', 0, 1)) }}
+                </span>
+                <span class="user-meta d-none d-md-flex">
+                  <span class="user-name">{{ auth()->user()?->name }}</span>
+                </span>
+                <span class="user-caret d-none d-md-inline-flex" aria-hidden="true">
+                  <i class="bi bi-chevron-down"></i>
+                </span>
               </span>
-              <div class="user-name d-none d-sm-block ms-2">
-                {{ auth()->user()?->name }}
-              </div>
-            </div>
-          </a>
-          <ul class="dropdown-menu dropdown-menu-end">
-            <li>
-              <span class="dropdown-item-text">
+            </summary>
+
+            <div class="account-menu">
+              <div class="dropdown-item-text">
                 <strong>{{ auth()->user()?->name }}</strong>
                 <small class="d-block text-muted">{{ auth()->user()?->email }}</small>
-              </span>
-            </li>
-            <li><hr class="dropdown-divider"></li>
-            <li>
+              </div>
+              <hr class="dropdown-divider">
               <form method="POST" action="{{ route('logout') }}" class="m-0 p-0">
                 @csrf
                 <button class="dropdown-item text-danger" type="submit">
                   <i class="bi bi-box-arrow-right me-2"></i> {{ __('common.logout') }}
                 </button>
               </form>
-            </li>
-          </ul>
+            </div>
+          </details>
         </li>
       </ul>
     </div>

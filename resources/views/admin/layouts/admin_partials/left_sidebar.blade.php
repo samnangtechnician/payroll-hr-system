@@ -1,22 +1,24 @@
 @php
-    $section = function (string $route): bool {
-        return request()->routeIs($route);
-    };
+  $section = function (string $route): bool {
+      return request()->routeIs($route);
+  };
 
-    $sectionStarts = function (string $prefix): bool {
-        return request()->routeIs($prefix.'*');
-    };
+  $sectionStarts = function (string $prefix): bool {
+      return request()->routeIs($prefix . '*');
+  };
 @endphp
 
 <aside class="sidebar-wrapper" data-simplebar="true">
   <div class="sidebar-header">
-    <div>
-      <h5 class="logo-text mb-0">{{ __('app.name') }}</h5>
-      <small class="text-muted">{{ __('app.tagline') }}</small>
-    </div>
-    <div class="toggle-icon ms-auto">
+    <a href="{{ route('admin.dashboard') }}" class="brand-shell">
+      <span class="brand-mark">PH</span>
+      <span class="brand-copy">
+        <span class="logo-text">{{ __('app.name') }}</span>
+      </span>
+    </a>
+    <button type="button" class="toggle-icon ms-auto border-0 bg-transparent p-0" aria-label="Toggle sidebar">
       <i class="bi bi-list"></i>
-    </div>
+    </button>
   </div>
 
   <ul class="metismenu" id="menu">
