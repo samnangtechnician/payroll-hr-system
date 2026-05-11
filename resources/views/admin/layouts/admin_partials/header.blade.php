@@ -1,3 +1,14 @@
+{{--
+  Stub elements required by the Skodash theme's `assets/backend/assets/js/app.js`.
+  The theme unconditionally calls `new PerfectScrollbar('.header-message-list')`
+  and `new PerfectScrollbar('.header-notifications-list')` on DOM ready. We
+  don't use these dropdowns in this layout, but PerfectScrollbar throws
+  "no element is specified to initialize PerfectScrollbar" if the selector
+  matches nothing. Two hidden, empty containers satisfy the constructor.
+--}}
+<div class="header-message-list" hidden></div>
+<div class="header-notifications-list" hidden></div>
+
 <header class="top-header">
   <nav class="navbar navbar-expand">
     <button type="button" class="mobile-toggle-icon d-xl-none border-0 bg-transparent p-0" aria-label="Toggle navigation">
