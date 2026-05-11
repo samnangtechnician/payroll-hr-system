@@ -25,8 +25,8 @@
                 <span class="header-language-icon">
                   <i class="bi bi-translate"></i>
                 </span>
-                <span class="header-language-label d-none d-md-inline">
-                  {{ app()->getLocale() === 'km' ? 'Khmer' : 'English' }}
+                <span class="header-language-label d-none d-md-inline" lang="{{ app()->getLocale() }}">
+                  {{ app()->getLocale() === 'km' ? 'ខ្មែរ' : 'English' }}
                 </span>
                 <span class="header-language-code">{{ strtoupper(app()->getLocale()) }}</span>
               </span>
@@ -48,7 +48,7 @@
                 <button class="dropdown-item language-menu-item{{ app()->getLocale() === 'km' ? ' active' : '' }}"
                   type="submit">
                   <span class="language-menu-code">KM</span>
-                  <span class="language-menu-text">ភាសាខ្មែរ</span>
+                  <span class="language-menu-text" lang="km">ភាសាខ្មែរ</span>
                 </button>
               </form>
             </div>

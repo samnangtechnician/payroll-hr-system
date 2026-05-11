@@ -17,6 +17,21 @@
 @import 'datatables.net-bs5/css/dataTables.bootstrap5.min.css';
 @import 'datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css';
 
+/* ------------------------------------------------------------------
+ * Khmer / multilingual font stack
+ *
+ * The Skodash theme sets `body { font-family: Roboto, sans-serif }` in
+ * `public/assets/backend/assets/css/style.css`. Roboto does NOT contain
+ * Khmer glyphs, so Khmer text would render with whatever fallback the
+ * OS picks (often Tofu boxes on Windows).
+ *
+ * Our app.css is loaded AFTER Skodash via Vite, so we redefine the
+ * body / form / button stack to always start with `Noto Sans Khmer`.
+ * Browsers do per-glyph font matching: Latin codepoints fall through
+ * to Roboto / system fonts, Khmer codepoints render with Noto Sans
+ * Khmer. We also bundle Moul-Regular for decorative Khmer headings.
+ * ------------------------------------------------------------------ */
+
 @font-face {
     font-family: 'Noto Sans Khmer';
     src: url('/assets/backend/assets/fonts/NotoSansKhmer.ttf') format('truetype');
@@ -25,9 +40,68 @@
     font-weight: 400;
 }
 
+@font-face {
+    font-family: 'Moul';
+    src: url('/assets/backend/assets/fonts/Moul-Regular.ttf') format('truetype');
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* Make Noto Sans Khmer the first font in the global stack so that any
+   Khmer codepoint (e.g. employee names entered in English UI) is still
+   rendered correctly. Latin codepoints flow through to Roboto / system. */
+:root {
+    --app-font-stack:
+        'Noto Sans Khmer',
+        'Roboto',
+        system-ui,
+        -apple-system,
+        'Segoe UI',
+        'Helvetica Neue',
+        Arial,
+        sans-serif;
+}
+
+html,
+body,
+.top-header,
+.top-header .navbar,
+.sidebar-wrapper,
+.sidebar-wrapper .metismenu,
+.page-content,
+.page-wrapper,
+.card,
+.modal-content,
+.dataTables_wrapper,
+table.dataTable,
+.form-control,
+.form-select,
+.input-group-text,
+.btn,
+.dropdown-menu,
+.swal2-popup,
+.swal2-container,
+.ts-wrapper,
+.ts-dropdown,
+.flatpickr-calendar {
+    font-family: var(--app-font-stack);
+}
+
+/* When the document locale is Khmer, force the entire tree (including
+   descendants) to the Khmer-first stack with `!important` so that any
+   leftover third-party rule that hard-codes a Latin-only font (e.g. the
+   Skodash theme's body rule) still falls back to Noto Sans Khmer. */
 html[lang="km"],
-[lang="km"] {
-    font-family: 'Noto Sans Khmer', 'Roboto', sans-serif;
+html[lang="km"] body,
+[lang="km"],
+[lang="km"] * {
+    font-family: var(--app-font-stack) !important;
+}
+
+/* Decorative Khmer headings opt in by adding class "khmer-display". */
+.khmer-display {
+    font-family: 'Moul', 'Noto Sans Khmer', serif;
 }
 
 /* Yajra DataTables / Bootstrap 5 pagination tweaks ------------------------ */
