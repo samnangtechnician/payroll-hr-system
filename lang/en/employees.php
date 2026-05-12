@@ -14,6 +14,8 @@ return [
         'contract_type' => 'Contract Type',
         'manager' => 'Reporting Manager',
         'employee_code' => 'Employee Code',
+        'full_name' => 'Full Name',
+        'country' => 'Country',
         'first_name' => 'First Name',
         'last_name' => 'Last Name',
         'khmer_name' => 'Khmer Name',
@@ -36,6 +38,11 @@ return [
         'salary_payment_method' => 'Payment Method',
         'status' => 'Status',
         'profile_photo' => 'Profile Photo',
+    ],
+    'tabs' => [
+        'personal' => 'Personal Info',
+        'employment' => 'Employment',
+        'compensation' => 'Compensation',
     ],
     'statuses' => [
         'active' => 'Active',

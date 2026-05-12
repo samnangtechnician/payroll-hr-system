@@ -7,7 +7,7 @@ return [
     'fields' => [
         'company' => 'ក្រុមហ៊ុន',
         'name' => 'ឈ្មោះ',
-        'guard_name' => 'Guard',
+        'guard_name' => 'ប្រភេទ​សិទ្ធិ​សុវត្ថិភាព',
         'description' => 'ការ​ពណ៌នា',
         'is_system' => 'ប្រព័ន្ធ?',
         'is_active' => 'សកម្ម?',

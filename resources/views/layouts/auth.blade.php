@@ -8,6 +8,7 @@
   <title>@yield('pageTitle', __('auth.login')) — {{ config('app.name') }}</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="preload" href="{{ asset('assets/backend/assets/fonts/NotoSansKhmer.ttf') }}" as="font" type="font/ttf" crossorigin>
   @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="bg-light">

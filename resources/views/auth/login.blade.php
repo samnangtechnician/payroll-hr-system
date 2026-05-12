@@ -47,10 +47,24 @@
       </form>
 
       <div class="text-center mt-4 small text-muted">
-        <div class="d-inline-flex gap-2">
-          <a href="{{ url()->current() }}?lang=en" class="text-muted">English</a>
+        <div class="d-inline-flex gap-2 align-items-center">
+          <form method="POST" action="{{ route('locale.store') }}" class="m-0 p-0">
+            @csrf
+            <input type="hidden" name="locale" value="en">
+            <button type="submit"
+                    class="btn btn-link btn-sm text-muted p-0 border-0 align-baseline{{ app()->getLocale() === 'en' ? ' fw-semibold' : '' }}">
+              English
+            </button>
+          </form>
           <span>|</span>
-          <a href="{{ url()->current() }}?lang=km" class="text-muted">ខ្មែរ</a>
+          <form method="POST" action="{{ route('locale.store') }}" class="m-0 p-0">
+            @csrf
+            <input type="hidden" name="locale" value="km">
+            <button type="submit" lang="km"
+                    class="btn btn-link btn-sm text-muted p-0 border-0 align-baseline{{ app()->getLocale() === 'km' ? ' fw-semibold' : '' }}">
+              ខ្មែរ
+            </button>
+          </form>
         </div>
       </div>
     </div>

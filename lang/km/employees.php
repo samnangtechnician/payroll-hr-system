@@ -14,6 +14,8 @@ return [
         'contract_type' => 'ប្រភេទ​កិច្ច​សន្យា',
         'manager' => 'ប្រធាន​រាយ​ការណ៍',
         'employee_code' => 'លេខ​កូដ​បុគ្គលិក',
+        'full_name' => 'ឈ្មោះ​ពេញ',
+        'country' => 'ប្រទេស',
         'first_name' => 'នាម',
         'last_name' => 'នាម​ត្រកូល',
         'khmer_name' => 'ឈ្មោះ​ខ្មែរ',
@@ -36,6 +38,11 @@ return [
         'salary_payment_method' => 'មធ្យោបាយ​ទូទាត់',
         'status' => 'ស្ថានភាព',
         'profile_photo' => 'រូប​ភាព',
+    ],
+    'tabs' => [
+        'personal' => 'ព័ត៌មាន​ផ្ទាល់​ខ្លួន',
+        'employment' => 'ការងារ',
+        'compensation' => 'ប្រាក់​ខែ និង​ការ​ផ្ដល់​ប្រាក់',
     ],
     'statuses' => [
         'active' => 'សកម្ម',

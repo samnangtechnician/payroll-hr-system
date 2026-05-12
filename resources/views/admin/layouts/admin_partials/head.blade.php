@@ -21,6 +21,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ asset('assets/backend/assets/plugins/bootstrap-icons/font/bootstrap-icons.css') }}">
+  {{-- Preload Khmer font so the very first paint already has Khmer glyphs available --}}
+  <link rel="preload" href="{{ asset('assets/backend/assets/fonts/NotoSansKhmer.ttf') }}" as="font" type="font/ttf" crossorigin>
 
   <!-- loader-->
   <link href="{{ asset('assets/backend/assets/css/pace.min.css') }}" rel="stylesheet" />

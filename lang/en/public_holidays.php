@@ -10,6 +10,7 @@ return [
         'name' => 'Name',
         'holiday_date' => 'Date',
         'is_paid' => 'Paid?',
+        'is_recurring' => 'Recurring Yearly?',
         'description' => 'Description',
     ],
     'deleted' => 'Holiday deleted',
